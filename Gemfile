@@ -26,8 +26,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 
 group :test do
-  gem 'cucumber-rails', :require => false
+  gem 'rspec-rails', :require => false
   gem 'database_cleaner'
+  gem 'capybara'
 end
 
 # To use ActiveModel has_secure_password
