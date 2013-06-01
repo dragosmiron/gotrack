@@ -1,0 +1,7 @@
+= simple_form_for @task do |f|
+  = f.input :description, label: "Task"
+  = f.button :submit, "Add"
+
+- @tasks.each do |task|
+  =task.description
+  %br
