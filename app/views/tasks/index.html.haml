@@ -3,5 +3,6 @@
   = f.button :submit, "Add"
 
 - @tasks.each do |task|
-  =task.description
+  = task.description
+  = button_to "delete", task, :method=>:delete
   %br
