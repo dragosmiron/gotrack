@@ -1,15 +1,20 @@
-= simple_form_for @task, html: {class: 'form-horizontal' } do |f|
-  .input-append.input-prepend
-    .add-on
-      %i.icon-circle-arrow-right
-    = f.input_field :description
-    = f.button :submit, "Add"
+.row-fluid
+  .span12
+    = simple_form_for @task, html: {class: 'form-inline' } do |f|
+      = f.input :description, input_html: {class: "span12 task-title-container"}, label: false, placeholder: "What can you say about your day?"
+      %button.btn.btn-info.pull-right.insert-task
+        %i.icon-level-up.icon-rotate-90.icon-large
 
-.well
-  .navbar
-    - @tasks.each do |task|
-      .navbar-inner
-        .brand
-          = link_to content_tag(:i, "",class: "icon-remove"), task, :method=>:delete
-          %p
-            = task.description
+%br
+.row-fluid
+  .span12
+    .well.tasks-container
+      %ul#task-list
+        - @tasks.each do |task|
+          %li
+            .well.task-item
+              %div
+                = link_to task, :method=>:delete, class: "pull-left delete-task" do
+                  = content_tag(:i, "",class: "icon-trash")
+                %span.task-title.pull-left
+                  = task.description

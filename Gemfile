@@ -18,7 +18,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
 gem 'bootstrap-sass'
+gem "font-awesome-rails"
 gem 'haml'
 gem "simple_form", "~> 3.0.0.rc"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

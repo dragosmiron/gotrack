@@ -7,13 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class=top-line></div>
 <div class="container">
-  <div class="row-fluid">
-    <div class="span12">
-      <%= yield %>
-    </div>
-  </div>
+  <%= render partial: "shared/header" %>
+  <%= yield %>
 </div>
 </body>
 </html>
