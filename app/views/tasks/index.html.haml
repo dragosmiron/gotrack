@@ -1,8 +1,15 @@
-= simple_form_for @task do |f|
-  = f.input :description, label: "Task"
-  = f.button :submit, "Add"
+= simple_form_for @task, html: {class: 'form-horizontal' } do |f|
+  .input-append.input-prepend
+    .add-on
+      %i.icon-circle-arrow-right
+    = f.input_field :description
+    = f.button :submit, "Add"
 
-- @tasks.each do |task|
-  = task.description
-  = button_to "delete", task, :method=>:delete
-  %br
+.well
+  .navbar
+    - @tasks.each do |task|
+      .navbar-inner
+        .brand
+          = link_to content_tag(:i, "",class: "icon-remove"), task, :method=>:delete
+          %p
+            = task.description
