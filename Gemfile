@@ -18,7 +18,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'flatui-rails'
+gem 'twitter-bootstrap-rails'
 gem 'haml'
 gem 'simple_form'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

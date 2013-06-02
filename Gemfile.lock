@@ -27,8 +27,6 @@ GEM
       tzinfo (~> 0.3.33)
     arel (4.0.0)
     atomic (1.1.9)
-    bootstrap-sass (2.2.2.0)
-      sass (~> 3.2)
     builder (3.1.4)
     capybara (2.0.3)
       mime-types (>= 1.16)
@@ -53,10 +51,6 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.8.1)
-    flatui-rails (0.0.4)
-      bootstrap-sass (= 2.2.2)
-      railties (>= 3.1)
-      sass-rails (>= 3.2.0)
     haml (4.0.2)
       tilt
     hike (1.2.2)
@@ -144,6 +138,10 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (1.1.1)
       coffee-rails
+    twitter-bootstrap-rails (2.2.6)
+      actionpack (>= 3.1)
+      execjs
+      railties (>= 3.1)
     tzinfo (0.3.37)
     uglifier (2.1.1)
       execjs (>= 0.3.0)
@@ -159,7 +157,6 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0.beta1)
   database_cleaner
-  flatui-rails
   haml
   jbuilder (~> 1.0.1)
   jquery-rails
@@ -170,4 +167,5 @@ DEPENDENCIES
   simple_form
   sqlite3
   turbolinks
+  twitter-bootstrap-rails
   uglifier (>= 1.0.3)
