@@ -1,7 +1,7 @@
 .row-fluid
   .span12
     = simple_form_for @task, html: {class: 'form-inline' } do |f|
-      = f.input :description, input_html: {class: "span12 task-title-container"}, label: false, placeholder: "What can you say about your day?"
+      = f.input :title, input_html: {class: "span12 task-title-container"}, label: false, placeholder: "What can you say about your day?"
       %button.btn.btn-info.pull-right.insert-task
         %i.icon-level-up.icon-rotate-90.icon-large
 
@@ -14,7 +14,10 @@
           %li
             .well.task-item
               %div
-                = link_to task, :method=>:delete, class: "pull-left delete-task" do
-                  = content_tag(:i, "",class: "icon-trash")
+                .actions.pull-left
+                  = link_to task, :method=>:delete, class: "delete-task" do
+                    %i.icon-trash
+                  %a.edit-task{href: "#"}
+                    %i.icon-edit
                 %span.task-title.pull-left
-                  = task.description
+                  = task.title

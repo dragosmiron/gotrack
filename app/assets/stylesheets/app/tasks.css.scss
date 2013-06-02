@@ -17,10 +17,13 @@
   list-style-type: none;
   margin: 0;
   paddin: 0;
-  .delete-task{
-    margin-right: 10px;
-    text-decoration: none;
-    color: #049cdb;
+  .actions{
+    a{
+      text-decoration: none;
+      color: #049cdb;
+      margin-right: 4px;
+    }
+    margin-right: 5px
   }
   .well.task-item{
     padding: 5px;
