@@ -1,10 +1,22 @@
 .row-fluid
   .span12
     = simple_form_for @task, html: {class: 'form-inline' } do |f|
-      = f.input :title, input_html: {class: "span12 task-title-container"}, label: false, placeholder: "What can you say about your day?"
-      %button.btn.btn-info.pull-right.insert-task
+      = f.input :title, input_html: {class: "span12 task-title-container"},
+                        label: false,
+                        placeholder: "What can you say about your day?"
+      = f.hidden_field :date_completed, value: params.fetch(:date, Date.today)
+      %button#insert-task.btn.btn-info.pull-right
         %i.icon-level-up.icon-rotate-90.icon-large
-
+%br
+.row-fluid
+  %a#previous-day.btn.btn-info.pull-left{:href => tasks_path(date: get_previous_day(params[:date])),
+                                         "title" => "Previous day",
+                                         "data-container" => ".container"}
+    %i.icon-caret-left.icon-large
+  %a#next-day.btn.btn-info.pull-right{:href => tasks_path(date: get_next_day(params[:date])),
+                                     "title" => "Next day",
+                                     "data-container" => ".container"}
+    %i.icon-caret-right.icon-large
 %br
 .row-fluid
   .span12

@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 1.0.1'
 group :test do
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'machinist', '>= 2.0.0.beta2'
 end
 
 group :test, :development do
